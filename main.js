@@ -22,13 +22,14 @@ document.getElementById('prezzo').innerHTML=prezzo
 let Genera = document.getElementById('Genera');
 let Annulla = document.getElementById('Annulla');
 
-Genera.addEventListener('dblclick'), 
+Genera.addEventListener('click', 
     function() {
+        
         
     }
 );
 
-Annulla.addEventListener('dblclick'), 
+Annulla.addEventListener('click', 
     function() {
         
     }

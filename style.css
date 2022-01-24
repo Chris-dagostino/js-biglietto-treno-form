@@ -36,6 +36,8 @@ h4 {
 .text-red {
     color: #b91450;
     font-weight: bolder;
+    font-size: 20px;
+    margin-bottom: 20px;
 }
 
 button {
@@ -43,4 +45,9 @@ button {
     background-color: #cccccc;
     color: #b91450;
     font-weight:bolder;
+    font-size: 20px;
+}
+
+.ms_bg_grey {
+    background-color: #808080;
 }
