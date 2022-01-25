@@ -51,3 +51,7 @@ button {
 .ms_bg_grey {
     background-color: #808080;
 }
+
+.hidden {
+    visibility: hidden;
+}

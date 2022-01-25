@@ -1,36 +1,62 @@
-// calcolo prezzo
+// tasto genera
+const Genera = document.getElementById('Genera')
 
-let prezzoBase = (km * 0,21);
+Genera.addEventListener('click'
+   function() {
+       const name = document.getElementById('nome').value;
+
+       const Km = document.getElementById('Km').value;
+
+       const fascia-eta = document.getElementById('fascia-età').value;
+
+       const prezzoKm = 0.21;
+
+       let prezzoBiglietto = Km * prezzoKm;
+
+       let offerta = "prezzo pieno";
+
+       if (fasciaEta == "minorenne") {
+
+        prezzoBiglietto = prezzoBiglietto - (prezzoBiglietto / 100 * 20);
+        offerta ="sconto minorenne"
+
+       } else if (fasciaEta == "over65" ) {
+
+        prezzoBiglietto = prezzoBiglietto - (prezzoBiglietto / 100 * 40);
+        offerta ="sconto pensionati"
+
+       }
+
+       let biglietto = document.getElementById('biglietto')
+       biglietto.classList.remove('hidden');
 
 
-if  (eta < 18) { 
-    var prezzo = prezzoBase - prezzoBase * 20/100
+       document.getElementById('nome-passeggero').innerHTML = name;
 
-} else if (eta > 65) {
-    var prezzo = prezzoBase - prezzoBase * 40/100
+       document.getElementById('costo').innerHTML = prezzoBiglietto.toFixed(2); + "euro";
 
-} else {
-    var prezzo = prezzoBase
+       document.getElementById('offerta-applicata').innerHTML = offerta;
 
-}
+       const numeroCarrozza = Math.floor((Math.random() * 9)) + 1;
+       document.getElementById('carrozza').innerHTML = numeroCarrozza;
 
-document.getElementById('prezzo').innerHTML=prezzo
+       const numeroCP = Math.floor((Math.random() * 10000)) + 90000;
+       document.getElementById('codice-cp').innerHTML = numeroCP;
+
+   }
+); 
 
 
-// funzione bottoni
+const Annulla = document.getElementById('Annulla');
 
-let Genera = document.getElementById('Genera');
-let Annulla = document.getElementById('Annulla');
-
-Genera.addEventListener('click', 
+Annulla.addEventListener('click'
     function() {
-        
-        
-    }
-);
 
-Annulla.addEventListener('click', 
-    function() {
-        
+        let biglietto = document.getElementById('biglietto');
+        biglietto.classList.add('hidden');
+
+        document.getElementById('name').value = "";
+        document.getElementById('Km').value = "";
     }
-);
+
+)

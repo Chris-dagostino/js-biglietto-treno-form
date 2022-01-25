@@ -19,20 +19,20 @@
         <div class="container container-up" >           
             <div class="row text-center py-4" >
                 <div class="col" >
-                    <div class="text-red" >Inserisci il tuo nome</div>
+                    <label for="nome" class="text-red" >Inserisci il tuo nome</label>
                     <input class="select" id="name" type="text">                                                       
                 </div>
                 <div class="col" >
-                    <div class="text-red" >Km da percorrere</div>
+                    <label for="Km" class="text-red" >Km da percorrere</label>
                     <input class="select" id="Km" type="number">
                 </div>
                 <div class="col" >
-                    <div class="text-red" >Fascia età</div>
-                    <select class="select" id="">
+                    <label for="fascia-eta" class="text-red" >Fascia età</label>
+                    <select class="select" id="fascia-eta">
                         <option value=""></option>
-                        <option value="">minorenne</option>
-                        <option value="">Maggiorenne</option>
-                        <option value="">over 65</option>
+                        <option value="minorenne">minorenne</option>
+                        <option value="maggiorenne">Maggiorenne</option>
+                        <option value="over65">over 65</option>
                     </select> 
                 </div>
             </div>
@@ -51,28 +51,37 @@
 
 
 
-    <section>
-        <h2>il tuo biglietto</h2>
-
-        <div class="container" >
-            <div class="row" >
-                <div class="col" >
-                    <h5>DETTAGLIO PASSEGGERO</h5>
+    <section class="biglietto" >
+        <h2 class="title" >Il tuo biglietto</h2>
+        <div id="biglietto" class="hidden" >
+            <h2>dettaglio passeggero</h2>
+            <div class="dati" >
+                <div class="nome" >
+                    <h2>Nome passeggero<span id="eta" ></span></h2>
+                    <h3 id="nome-passeggero" ></h3>
+                </div>
+                <div class="offerta" >
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>offerta</th>
+                                <th>carrozza</th>
+                                <th>codice CP</th>
+                                <th>costo biglietto</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span id="offerta-applicata" ></span></td>
+                                <td><span id="carrozza" ></span></td>
+                                <td><span id="codice-cp" ></span></td>
+                                <td><span id="costo" ></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
-            <div class="row" >
-                <div class="col-5 ms_bg_grey" >
-                    <h5>NOME PASSEGGERO</h5>
-
-                </div>
-                <div class="col-7" >
-                    
-
-                </div>
-
-            </div>
-
-        </div>
+        </div>        
 
     </section>
 
